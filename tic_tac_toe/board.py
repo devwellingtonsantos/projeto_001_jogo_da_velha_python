@@ -97,7 +97,6 @@ move = player.get_mover()
 move1 = player.get_mover()
 move2 = player.get_mover()
 
-
 board.print_board()
 board.submit_move(player, move)
 board.submit_move(player, move1)
