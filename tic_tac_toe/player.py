@@ -30,7 +30,7 @@ class Player:
         if self._is_human:
             return self.get_human_move()
         else:
-            return self.get_human_move()
+            return self.get_computer_move()
 
     def get_human_move(self):
         while True:

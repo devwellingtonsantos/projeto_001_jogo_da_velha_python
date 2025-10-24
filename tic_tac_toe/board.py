@@ -91,17 +91,32 @@ class Board:
 
 board = Board()
 player = Player()
-board.print_board()
-
-move = player.get_mover()
-move1 = player.get_mover()
-move2 = player.get_mover()
+computer = Player(False)
 
 board.print_board()
-board.submit_move(player, move)
-board.submit_move(player, move1)
-board.submit_move(player, move2)
-board.print_board()
 
-perdeu = board.check_is_game_over(player, move2)
-print(perdeu)
+
+while not board.check_is_tie():
+    human_move = player.get_mover()
+    board.submit_move(player, human_move)
+
+    board.print_board()
+
+    computer_move = computer.get_mover()
+    board.submit_move(computer, computer_move)
+
+    board.print_board()
+
+print('Ouve um empate!')
+
+# move1 = player.get_mover()
+# move2 = player.get_mover()
+
+# board.print_board()
+# board.submit_move(player, move)
+# board.submit_move(player, move1)
+# board.submit_move(player, move2)
+# board.print_board()
+
+# perdeu = board.check_is_game_over(player, move2)
+# print(perdeu)
